@@ -1,0 +1,45 @@
+---
+title: "Análise de commits no Github"
+author: "Seu Nome"
+output:
+  html_notebook:
+    toc: yes
+    #toc_float: yes
+    code_folding: hide
+---
+
+```{r setup}
+library(dplyr)
+library(readr)
+```
+
+# Análise exploratória dos dados
+
+Inicie fazendo uma análise exploratória, descrevendo as variáveis disponíveis e
+mostrando suas características.
+
+Dica: para manipular datas, veja a biblioteca [lubridate](https://lubridate.tidyverse.org/).
+
+Tabela com os dados da quantidade de usuários que fizeram commits para arquivos de uma certa extensão por dia:
+
+```{r}
+commits <- read_csv("dados/github-users-committing-filetypes.csv",
+                    col_types = "ciiii")
+
+commits
+```
+
+# Perguntas
+
+Escolha duas linguagens de programação que lhe interessem e responda o seguinte:
+
+1. Para cada uma delas, há uma diferença significativa na sua popularidade durante a semana e durante o fim de semana? Essa diferença é grande? (dica: aqui você precisa decidir como medir popularidade: média? mediana? outra estatística?)
+
+2. Existe uma diferença significativa entre a popularidade das duas linguagens nos fins de semana? (a mesma dica vale)
+
+Além dessas perguntas, faça pelo menos mais 4 perguntas que você pode obter dos dados. Pode ser que uma pergunta vá levando a outras. Para cada pergunta, escreva também uma resposta possível/plausível (hipótese).
+
+# Análise
+
+Por fim, construa uma resposta para cada pergunta listada acima no formato um relatório, confirmando ou não as hipóteses que você levantou.
+
